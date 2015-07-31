@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
     config.vm.hostname = "ge-vm"
-    config.vm.box = "ubuntu/precise32"
+    config.vm.box = "ubuntu/trusty64"
 
     if Vagrant.has_plugin?("vagrant-proxyconf")
         config.proxy.enabled  = false
