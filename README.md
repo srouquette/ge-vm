@@ -11,9 +11,7 @@ This box contains a vagrant / puppet recipe that allows you to create a develop 
   * Allows to install Chocolatey ``Set-ExecutionPolicy Unrestricted``
   * Install Chocolatey ``iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))``
   * Install the necessary apps: ``cinst -y git virtualbox vagrant``
-* Download and install [Vagrant](http://downloads.vagrantup.com/)
-* Download and install  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* Clone the project ```git clone --recursive git@github.com:srouquette/ge-vm.git```
+* Clone the project ```git clone --recursive https://github.com/srouquette/ge-vm.git```
 * In the project dir run ```vagrant up```
 
 ## Installed Services
