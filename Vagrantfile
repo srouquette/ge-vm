@@ -3,8 +3,14 @@
 
 Vagrant.configure("2") do |config|
     config.vm.hostname = "ge-vm"
-    config.vm.box = "precise32"
-    config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    config.vm.box = "ubuntu/precise32"
+
+    if Vagrant.has_plugin?("vagrant-proxyconf")
+        config.proxy.enabled  = false
+        config.proxy.http     = "http://yourproxy:8080"
+        config.proxy.https    = "http://yourproxy:8080"
+        config.proxy.no_proxy = "localhost,127.0.0.1"
+    end
 
     config.vm.network :forwarded_port, guest: 5672, host: 5672
     config.vm.network :forwarded_port, guest: 15672, host: 15672
