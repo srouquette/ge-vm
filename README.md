@@ -15,6 +15,8 @@ Make sure all your proxy environnement variables are configured (HTTP_PROXY, HTT
 - Install Chocolatey: ``iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))``
 - Install the apps: ``cinst -y git virtualbox vagrant``
 
+**WARNING**: you may need to install manually [VirtualBox 4.2.12](https://www.virtualbox.org/wiki/Download_Old_Builds_4_2_pre14) (specifically) due to incompatibility with McAfee Antivirus.
+
 ### VM
 
 - Install proxy support: ``vagrant plugin install vagrant-proxyconf``

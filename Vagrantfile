@@ -6,9 +6,9 @@ Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/trusty64"
 
     if Vagrant.has_plugin?("vagrant-proxyconf")
-        config.proxy.enabled  = false
-        config.proxy.http     = "http://yourproxy:8080"
-        config.proxy.https    = "http://yourproxy:8080"
+        config.proxy.enabled  = true
+        config.proxy.http     = "http://http-proxy-euro.geps.ge.com:80"
+        config.proxy.https    = "http://http-proxy-euro.geps.ge.com:80"
         config.proxy.no_proxy = "localhost,127.0.0.1"
     end
 
