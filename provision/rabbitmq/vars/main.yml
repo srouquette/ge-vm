@@ -1,0 +1,4 @@
+---
+rabbitmq:
+  erlang_cookie_location: "/var/lib/rabbitmq/.erlang.cookie"
+  erlang_cookie: 'default'
