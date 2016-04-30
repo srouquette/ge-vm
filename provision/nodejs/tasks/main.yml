@@ -1,0 +1,17 @@
+---
+- name: install NodeJS
+  apt: pkg=nodejs state=installed
+
+- name: install npm
+  apt: pkg=npm state=installed
+
+- name: create symlink for NodeJS
+  file: src=/usr/bin/nodejs dest=/usr/bin/node state=link
+
+- name: install forever
+  npm: name=forever global=yes state=present
+
+- name: Check list of NodeJS apps running.
+  command: forever list
+  register: forever_list
+  changed_when: false

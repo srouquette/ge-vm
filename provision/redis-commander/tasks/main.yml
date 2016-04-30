@@ -1,0 +1,7 @@
+---
+- name: install redis-commander
+  npm: name=redis-commander global=yes state=present
+
+- name: start redis-commander
+  command: forever start /usr/local/bin/redis-commander --redis-host localhost --port 8090
+  when: "forever_list.stdout.find('/usr/local/bin/redis-commander') == -1"

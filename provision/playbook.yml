@@ -1,4 +1,6 @@
 - hosts: all
   roles:
+    - nodejs
     - rabbitmq
     - redis
+    - redis-commander
