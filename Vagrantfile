@@ -18,8 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     if Vagrant.has_plugin?("vagrant-proxyconf")
         config.proxy.enabled  = true
-        config.proxy.http     = "http://http-proxy-euro.geps.ge.com:80"
-        config.proxy.https    = "http://http-proxy-euro.geps.ge.com:80"
+        config.proxy.http     = "http://3.187.157.236:9400"
+        config.proxy.https    = "http://3.187.157.236:9400"
         config.proxy.no_proxy = "localhost,127.0.0.1"
     end
 
